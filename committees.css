@@ -1,23 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
 *{
     color: red;
+	font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
 }
-
+body{
+  background-image: url("https://wallpaperaccess.com/full/952192.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 @media all and (max-width:1009px) {
   .nav {
     height: 20vh !important;
   }
 }
+/* Lazy Load Styles */
+.card-image {
+  display: block;
+  min-height: 20rem; /* layout hack */
+  background: #fff center center no-repeat;
+  background-size: cover;
+  filter: blur(3px); /* blur the lowres image */
+}
 
+.card-image > img {
+  display: block;
+  width: 100%;
+  opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+  filter: none; /* remove the blur on fullres image */
+  transition: filter 1s;
+}
+.body-font{
+  font-size: 20px;
+}
+
+.card-list {
+  display: block;
+  margin: 1rem auto;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.card {
+  display: inline-block;
+  width: 90%;
+  max-width: 20rem;
+  margin: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+  display: block;
+  padding: 1em 0.5em;
+
+  text-decoration: none;
+}
+.card-description h1{
+  color:  #515151;
+  font-size: 20px;
+}
+
+.card-description > h2 {
+  margin: 0 0 0.5em;
+}
+
+.card-description > p {
+  margin: 0;
+}
+
+.doc{
+  margin: 100px;
+  overflow: hidden;
+  background-color: white;
+  width: 305px;
+  height: 305px;
+  border-radius: 8px;
+  box-shadow: #00000040 2px 2px 16px;
+  transition-duration: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
+.doc:hover {
+  background-color: #f3f2f2;
+  cursor: pointer;
+}
+.big{
+  font-size: 50px !important;
+}
 @media all and (max-width :636px) {
   .nav{
     height: 30vh !important;
   }
 }
 
-.nav{
-    height: 14vh;
-    background-color: white;
-}
+
 .mr-5{
     color: red;
 
@@ -26,17 +121,16 @@
     color: rgb(255, 101, 101);
 }
 
-.dropdown{
-  margin-left: 20vh;
-  color: red;
-  padding: 16px;
-  float: right;
-  font-size: 18px;
-  border: none;
+  .dropdown{
+    border-radius: 5px;
+    padding: 16px;
+    float: right;
+    font-size: 18px;
+    border: none;
 
-}
-.dropdown-content {
-    display: none;
+  }
+  .dropdown-content {
+      display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
