@@ -62,3 +62,37 @@
   .dropdown:hover .dropdown-content {display: block;}
   
   
+.svg{
+  display: inline-block;
+  margin: 10px;
+}
+
+.gmail span{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  font-family:'Nunito', sans-serif;
+  text-align: center;
+  border-radius: 6px;
+  padding: 7px;
+
+  position: absolute;
+  z-index: 1;
+  margin: 6px;
+}
+.gmail:hover span{
+  visibility: visible;
+}
+
+#dropdown-link p{
+  font-size: 20px;
+  color: red;
+  
+}
+#dropdown-link{
+  margin-top: 40px;
+  width: 300px;
+  border-radius: 3px;
+  background-color: white;
+}
