@@ -15,41 +15,51 @@
     </head>
     
     <body>
-  </section>
-  <header class="text-gray-600 body-font nav">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img src="logo.png" alt="" height="60px" width="60px">
-        <span style = "color: rgb(255, 32, 32);" class="ml-3 text-xl text-white">LEDWHEART MUN</span>
-      </a>
-      <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-        <a href="index.html" class="mr-5">HOME</a>
-        <a href="aboutus.html" class="mr-5">ABOUT US</a>
-        <a href="team.html" class="mr-5">TEAM</a>
-        <div class="dropdown mr-5">
-          <button>COMMITTEES</button> 
-          <div class="dropdown-content">
-            <a href="UNGA.html">UNGA</a>
-            <a href="UNHRC.html">UNHRC</a>
-            <a href="UNCSW.html">UNCSW</a>
-            <a href="UNSC.html">UNSC</a>
-            <a href="AIPPM.html">AIPPM</a>
-            <a href="HCC.html">HCC</a>
-          </div>
-        </div>
-        <div class="dropdown mr-5">
-          <button>APPLY NOW</button> 
-          <div class="dropdown-content">
-            <a href="https://forms.gle/d2TbnDFPf2nd4DPh8">Delegate Applications</a>
-            <a href="https://forms.gle/o4ousnVHrC4TyPhf9">Executive Board Applications</a>
-            <a href="https://forms.gle/JPepJyzoPDsEDp8v5">Secretariat Applications</a>
-            <a href="https://forms.gle/D2288LcveHFtGXHKA">Organizing Committee Applications</a>
-            <a href="https://forms.gle/o4ousnVHrC4TyPhf9">Campus Ambassador Applications</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  
+      
+
+      <header>
+        <nav>
+            <div>
+                <a href="index.html">Ledwheart MUN </a>
+            </div>
+            <div>
+                <a>About Us</a>
+            </div>
+            <div>
+                <a>Team</a>
+            </div>
+            <div>
+                <a>Resources</a>
+            </div>
+            <div>
+                <a>Committees</a>
+                <div>
+                  <a href="UNGA.html">UNGA</a>
+                  <a href="UNHRC.html">UNHRC</a>
+                  <a href="UNCSW.html">UNCSW</a>
+                  <a href="UNSC.html">UNSC</a>
+                  <a href="AIPPM.html">AIPPM</a>
+                  <a href="HCC.html">HCC</a>
+                </div>
+            </div>
+            <div>
+                <a>Apply Now</a>
+                <div>
+                  <a href="https://forms.gle/d2TbnDFPf2nd4DPh8">Delegate Applications</a>
+                  <a href="https://forms.gle/o4ousnVHrC4TyPhf9">Executive Board Applications</a>
+                  <a href="https://forms.gle/JPepJyzoPDsEDp8v5">Secretariat Applications</a>
+                  <a href="https://forms.gle/D2288LcveHFtGXHKA">Organizing Committee Applications</a>
+                  <a href="https://forms.gle/o4ousnVHrC4TyPhf9">Campus Ambassador Applications</a>
+                  <a href="https://forms.gle/MzJrPDoVxaSKYmUX6">School Delegation Applications</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+
+    
 
   <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 ">
@@ -89,7 +99,7 @@
         <img src="" alt="" />
       </a>
       <a class="card-description" href="" target="_blank">
-        <h1>Manav Bindlish</h1>
+        <h1>Umang Khandelwal</h1>
         <p>Rapporteur</p>
       </a>
     </li>
@@ -102,14 +112,6 @@
 
         <br><br><br><br>
         
-    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-red big">Background Guide</h1>
-    
-        
-
-    <div class="doc">
-        <img src="docs.svg" alt="document">
-        <p style="color: black;text-decoration: none;margin: 15px;font-size: 25px;">UNGA</p>
-    </div>
             
     </center>
        </div>
@@ -205,6 +207,38 @@
   
   
     <script>
+
+
+      
+
+$(document).ready(function() {
+      "use strict";
+      $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+      $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+      $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">&nbsp;</a>");
+      $(".menu > ul > li").hover(function(e) {
+        if ($(window).width() > 943) {
+          $(this).children("ul").stop(true, false).fadeToggle(150);
+          e.preventDefault();
+        }
+      });
+      $(".menu > ul > li").click(function() {
+        if ($(window).width() <= 943) {
+          $(this).children("ul").fadeToggle(150);
+        }
+      });
+      $(".menu-mobile").click(function(e) {
+        $(".menu > ul").toggleClass('show-on-mobile');
+        e.preventDefault();
+      });
+    });
+    $(window).resize(function() {
+      $(".menu > ul > li").children("ul").hide();
+      $(".menu > ul").removeClass('show-on-mobile');
+    });
+
+
+
 window.addEventListener('load', function() {
   
   // setTimeout to simulate the delay from a real page load

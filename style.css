@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url("https://use.typekit.net/yqp3rpj.css");
+
 
 *{
-    color: red;
-	font-family: 'PT Sans', sans-serif;
+    color: black;
+    font-family: alternate-gothic-atf, sans-serif;
+
 	font-size: 20px;
 }
 
