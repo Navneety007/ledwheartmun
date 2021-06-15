@@ -10,6 +10,7 @@
     
     <meta name="theme-color" content="#4ac0ff"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
     </head>
@@ -91,11 +92,9 @@
 </div>
 
 
-
-<section class="text-gray-600 body-font">
-<div class="container px-5 py-24 ">
+<section style="margin-top: 20vh;" class="text-gray-600 body-font">
   <div class="flex flex-wrap w-full mb-20 flex-col">
-      <center>
+    <center>
     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-red big">HCC</h1>
     <br>
     <h1 style="color: rgb(54, 54, 54) !important; font-size: 30px;">Historical Crisis Committee</h1>
@@ -103,48 +102,32 @@
     <p style = "font-size: 30px;color: rgb(54, 54, 54) !important;"class="lg:w-1/2 w-full leading-relaxed">  <br><br>Agenda - ‘Cabinet Mission Plan of 1946’   </p>
     <br><br><br><br>
 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-red big">Executive Board</h1>
-    
-
-<ul class="card-list">
-<li class="card">
-    <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
-      <img src="" alt="" />
-    </a>
-    <a class="card-description" href="" target="_blank">
-      <h1>Pranit Sabharwal</h1>
-      <p>Chairperson</p>
-    </a>
-  </li> 
-  <li class="card">
-    <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
-      <img src="" alt="" />
-    </a>
-    <a class="card-description" href="" target="_blank">
-      <h1>Abhimanyu Pathania</h1>
-      <p>Vice-Chairperson</p>
-    </a>
-  </li>   
-
-<li class="card">
-  <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
-    <img src="" alt="" />
-  </a>
-  <a class="card-description" href="" target="_blank">
-    <h1>-</h1>
-    <p>Rapporteur</p>
-  </a>
-</li>
-
-
-</ul>
-
-
-        
-        
 </center>
-   </div>
-</div>
+
+
 </section>
+</div style="align-items: center;">
+<figure class="snip1567">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample88.jpg" alt="sample88" />
+<figcaption>
+<h3><b>Pranit Sabharwal</b><br>Chairperson</h3>
+</figcaption>
+</figure>
+<figure class="snip1567 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample88.jpg" alt="sample100" />
+<figcaption>
+<h3><b>Abhimanyu Pathania</b><br>Vice-Chairperson</h3>
+</figcaption>
+</figure>
+<figure class="snip1567"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample88.jpg" alt="sample96" />
+<figcaption>
+<h3><b>-</b><br>Rapporteur</h3>
+</figcaption>
+</figure>
+</div>  
+
+
+
+
 
 <footer class="text-gray-600 body-font">
 <div style="background-color: rgba(255, 255, 255, 0.400)" class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
@@ -253,6 +236,11 @@ else{
 }
   
 
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
 
 $(document).ready(function() {
   "use strict";

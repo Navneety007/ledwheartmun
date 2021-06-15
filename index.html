@@ -198,24 +198,25 @@
 
 
 <script>
-
 function reverse(){
-let element = document.getElementById("New");
-let visible = element.style.visibility;
-console.log(visible)
-if (visible == "hidden"){
-  element.style.visibility = "visible";
-}
-else if (visible == "visible"){
-  element.style.visibility = "hidden";
-}
-else{
+    let element = document.getElementById("New");
+    let visible = element.style.visibility;
+    console.log(visible)
+    if (visible == "hidden"){
+      element.style.visibility = "visible";
+    }
+    else if (visible == "visible"){
+      element.style.visibility = "hidden";
+    }
+    else{
+      
+      element.style.visibility = "visible";
+    }
+  }
+      
   
-  element.style.visibility = "visible";
-}
-}
+      
   
-
 
 $(document).ready(function() {
   "use strict";

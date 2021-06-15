@@ -3,7 +3,7 @@
 *{
     color: black;
     font-family: alternate-gothic-atf, sans-serif;
-  font-size: 20px;
+    font-size: 20px;
 }
 body{
   background-image: url("https://wallpaperaccess.com/full/952192.jpg");
@@ -14,6 +14,30 @@ body{
 @media all and (max-width:1009px) {
   .nav {
     height: 20vh !important;
+  }
+}
+@media all and (max-width:621px){
+  #bar{
+    display: none !important;
+  }
+  
+  header{
+    display: none !important;
+  }
+}
+@media all and (min-width:621px){
+  #New , #bar{
+    display: none !important;
+
+  }
+  header{
+    display: block !important;
+  }
+}
+
+@media all and (max-width:752px){
+  .w-full{
+    border: none !important;
   }
 }
 
@@ -246,4 +270,68 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+#New {
+  position:absolute;
+  visibility: hidden;
+  background-color: rgba(245, 245, 245, 0.842);
+  width: 20vh;
+  list-style-type: none;
+  float: left;
+  margin: -2vh -4vh;
+}
+
+#New li {
+  padding: 8px;
+  position: relative;
+}
+
+/* The sub dropdown */
+#New ul {
+  
+  display: none;
+  
+  left: 0;
+  position: absolute;
+  top: 100%;
+  background-color: rgba(245, 245, 245, 0.842);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  width:20vh
+}
+
+/* The second level sub dropdown */
+#New ul ul {
+  left: 50%;
+  top: 0;
+}
+/* Change background color of list item when being hovered */
+#New li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Show the direct sub dropdown when hovering the list item */
+#New li:hover > ul {
+  display: block;
+  margin-left: 20vh;
+  width: 25vh;
+  height: 40vh;
+  margin-top: -6vh;
+}
+
+#barimg{
+  width: 5vh;
+  height: 5vh ;
+}
+
+#bar{
+  margin: -6vh -9vh;
+  position: absolute;
+  width: 6vh;
+  height: 6vh;
+  float: left;
+  visibility: hidden;
 }

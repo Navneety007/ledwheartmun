@@ -1,18 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
-
+@import url("https://use.typekit.net/yqp3rpj.css");
 
 *{
-    color: white;
-	font-family: 'PT Sans', sans-serif;
-	font-size: 20px;
-    
-    
+    color: black;
+    font-family: alternate-gothic-atf, sans-serif;
+  font-size: 20px;
 }
 body{
     background-image: url(https://images.hdqwalls.com/download/white-cube-pattern-4k-bu-1920x1080.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
+
+@media all and (max-width:621px){
+  #bar{
+    visibility: visible !important;
+  }
+  
+  header{
+    visibility: hidden !important;
+  }
+}
+@media all and (min-width:621px){
+  #New , #bar{
+    visibility: hidden !important;
+
+  }
+  header{
+    visibility: visible !important;
+  }
+}
+
+@media all and (max-width:752px){
+  .w-full{
+    border: none !important;
+  }
+}
+
 
 
 
@@ -219,7 +243,7 @@ p {
     color: currentcolor;
   }
   
-  /* Utilities */
+  
   .auto-grid {
     display: grid;
     grid-template-columns: repeat(
@@ -293,6 +317,11 @@ p {
     
   }
   
+.svg{
+  display: inline-block;
+  margin: 10px;
+}
+
   
   .profile > * {
     z-index: 1;
@@ -400,4 +429,68 @@ p {
 {
     background-color: #f3f2f2;
     cursor: pointer;
+}
+
+#New {
+  position:absolute;
+  visibility: hidden;
+  background-color: rgba(245, 245, 245, 0.842);
+  width: 20vh;
+  list-style-type: none;
+  float: left;
+  margin: -2vh -4vh;
+}
+
+#New li {
+  padding: 8px;
+  position: relative;
+}
+
+/* The sub dropdown */
+#New ul {
+  
+  display: none;
+  
+  
+  position: absolute;
+  top: 100%;
+  background-color: rgba(245, 245, 245, 0.842);
+  list-style-type: none;
+  padding: auto;
+  margin:0;
+  float: right;
+  width:40vh;
+}
+
+/* The second level sub dropdown */
+#New ul ul {
+  left: 50%;
+  top: 0;
+}
+
+#New li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Show the direct sub dropdown when hovering the list item */
+#New li:hover > ul {
+  display: block;
+  margin-left: 19vh;
+  width: 25vh;
+  height: 40vh;
+  margin-top: -6vh;
+}
+
+#barimg{
+  width: 6vh;
+  height: 6vh ;
+}
+
+#bar{
+  margin: -6vh -9vh;
+  position: relative;
+  width: 6vh;
+  height: 6vh;
+  float: left;
+  visibility: hidden;
 }

@@ -13,11 +13,7 @@ body{
   overflow-x: hidden;
   text-align: center;
 }
-@media all and (max-width:1009px) {
-  .nav {
-    height: 20vh !important;
-  }
-}
+
 @media all and (max-width:621px){
   #bar{
     visibility: visible !important;
@@ -37,6 +33,11 @@ body{
   }
 }
 
+@media all and (max-width:752px){
+  .w-full{
+    border: none !important;
+  }
+}
 
 
 header {
@@ -217,26 +218,6 @@ p {
   margin: 0;
 }
 
-.doc{
-  margin: 100px;
-  overflow: hidden;
-  background-color: white;
-  width: 305px;
-  height: 305px;
-  border-radius: 8px;
-  box-shadow: #00000040 2px 2px 16px;
-  transition-duration: 0.2s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  text-align: center;
-}
-.doc:hover {
-  background-color: #f3f2f2;
-  cursor: pointer;
-}
 .big{
   font-size: 50px !important;
 }
@@ -283,11 +264,13 @@ p {
 
 
 #New {
+  position:absolute;
   visibility: hidden;
   background-color: rgba(245, 245, 245, 0.842);
   width: 20vh;
   list-style-type: none;
-  float: right;
+  float: left;
+  margin: -2vh -4vh;
 }
 
 #New li {
@@ -300,15 +283,15 @@ p {
   
   display: none;
   
-  left: 0;
+  
   position: absolute;
   top: 100%;
   background-color: rgba(245, 245, 245, 0.842);
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding: auto;
+  margin:0;
   float: right;
-  width:20vh
+  width:40vh;
 }
 
 /* The second level sub dropdown */
@@ -316,7 +299,7 @@ p {
   left: 50%;
   top: 0;
 }
-/* Change background color of list item when being hovered */
+
 #New li:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -324,7 +307,7 @@ p {
 /* Show the direct sub dropdown when hovering the list item */
 #New li:hover > ul {
   display: block;
-  margin-left: 20vh;
+  margin-left: 19vh;
   width: 25vh;
   height: 40vh;
   margin-top: -6vh;
@@ -370,13 +353,15 @@ p {
   margin: 20vh 0vh;
 }
 #barimg{
-  width: 5vh;
-  height: 5vh ;
+  width: 6vh;
+  height: 6vh ;
 }
 
 #bar{
-  width: 5vh;
-  height: 5vh;
+  margin: -6vh -9vh;
+  position: absolute;
+  width: 6vh;
+  height: 6vh;
   float: left;
   visibility: hidden;
 }

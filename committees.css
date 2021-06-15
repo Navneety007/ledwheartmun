@@ -1,4 +1,6 @@
 @import url("https://use.typekit.net/yqp3rpj.css");
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
 
 *{
     color: rgb(27, 27, 27);
@@ -9,8 +11,7 @@ body{
   background-image: url("https://wallpaperaccess.com/full/952192.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
-  overflow-x: hidden;
+  position: relative;
   text-align: center;
 }
 @media all and (max-width:1009px) {
@@ -34,6 +35,11 @@ body{
   }
   header{
     visibility: visible !important;
+  }
+}
+@media all and (max-width:752px){
+  .w-full{
+    border: none !important;
   }
 }
 
@@ -146,97 +152,6 @@ p {
 
 
 
-
-
-/* Lazy Load Styles */
-.card-image {
-  display: block;
-  min-height: 20rem; /* layout hack */
-  background: #fff center center no-repeat;
-  background-size: cover;
-  filter: blur(3px); /* blur the lowres image */
-}
-
-.card-image > img {
-  display: block;
-  width: 100%;
-  opacity: 0; /* visually hide the img element */
-}
-
-.card-image.is-loaded {
-  filter: none; /* remove the blur on fullres image */
-  transition: filter 1s;
-}
-.body-font{
-  font-size: 20px;
-}
-
-.card-list {
-  display: block;
-  margin: 1rem auto;
-  padding: 0;
-  font-size: 0;
-  text-align: center;
-  list-style: none;
-}
-
-
-.card {
-  display: inline-block;
-  width: 90%;
-  max-width: 20rem;
-  margin: 1rem;
-  font-size: 1rem;
-  text-decoration: none;
-  overflow: hidden;
-  box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-}
-
-.card:hover {
-  transform: translateY(-0.5rem) scale(1.0125);
-  box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
-}
-
-.card-description {
-  display: block;
-  padding: 1em 0.5em;
-
-  text-decoration: none;
-}
-.card-description h1{
-  color:  #515151;
-  font-size: 20px;
-}
-
-.card-description > h2 {
-  margin: 0 0 0.5em;
-}
-
-.card-description > p {
-  margin: 0;
-}
-
-.doc{
-  margin: 100px;
-  overflow: hidden;
-  background-color: white;
-  width: 305px;
-  height: 305px;
-  border-radius: 8px;
-  box-shadow: #00000040 2px 2px 16px;
-  transition-duration: 0.2s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  text-align: center;
-}
-.doc:hover {
-  background-color: #f3f2f2;
-  cursor: pointer;
-}
 .big{
   font-size: 50px !important;
 }
@@ -283,11 +198,13 @@ p {
 
 
 #New {
+  position:absolute;
   visibility: hidden;
   background-color: rgba(245, 245, 245, 0.842);
   width: 20vh;
   list-style-type: none;
-  float: right;
+  float: left;
+  margin: -2vh -4vh;
 }
 
 #New li {
@@ -336,7 +253,6 @@ p {
     width: 120px;
     background-color: black;
     color: #fff;
-    font-family:'Nunito', sans-serif;
     text-align: center;
     border-radius: 6px;
     padding: 7px;
@@ -375,8 +291,116 @@ p {
 }
 
 #bar{
-  width: 5vh;
-  height: 5vh;
+  margin: -6vh -9vh;
+  position: absolute;
+  width: 6vh;
+  height: 6vh;
   float: left;
   visibility: hidden;
 }
+
+
+
+
+
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.snip1567 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  height: 50vh;
+  width: 40vh;
+}
+
+.snip1567 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+
+.snip1567 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1567 h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background-color: #f3f3f3d0;
+  top: 0;
+  letter-spacing: -0.4px;
+  margin: 0;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.snip1567 > img{
+  
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.snip1567 p {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0px 20px;
+  opacity: 0;
+  text-align: right;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+
+
+.snip1567 a {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.snip1567:hover .hover,
+.snip1567.hover .hover {
+  opacity: 1;
+}
+
+.snip1567:hover p,
+.snip1567.hover p {
+  opacity: 1;
+}
+
+.snip1567:hover h3,
+.snip1567.hover h3 {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.snip1567:hover i,
+.snip1567.hover i {
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+  transform: translate(-50%, -50%) scale(0.1);
+  opacity: 0;
+}
+
+
